@@ -7,7 +7,7 @@ RUN pacman -Syyu --noconfirm --noprogressbar && \
     base-devel \
     ttf-roboto
 
-# Add user, group sudo; switch to user
+# Add user, group sudo
 RUN /usr/sbin/groupadd --system sudo && \
     /usr/sbin/useradd -m --groups sudo user && \
     /usr/sbin/sed -i -e "s/Defaults    requiretty.*/ #Defaults    requiretty/g" /etc/sudoers && \
