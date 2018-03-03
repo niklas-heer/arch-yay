@@ -5,6 +5,11 @@
 # Version: 1.0.0 (2018-03-03)
 
 main() {
+    if [ -z "$2" ]; then
+        echo "No version set."
+        exit 1
+    fi
+
     HUB_BASE="niklasheer"
     LOCAL_NAME="$1"
     HUB_NAME="$1"
